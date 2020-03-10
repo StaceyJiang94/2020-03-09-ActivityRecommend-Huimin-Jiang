@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +10,75 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="_020_03_09_ActivityRecommend_Huimin_Jiang" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Fb4-JC-kZW">
+                                <rect key="frame" x="20" y="124" width="374" height="34"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperature Input: " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jSB-AY-UfV">
+                                        <rect key="frame" x="0.0" y="0.0" width="150" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FSC-il-ccv">
+                                        <rect key="frame" x="150" y="0.0" width="224" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwp-Nj-Lsq">
+                                <rect key="frame" x="20" y="218" width="374" height="163.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <state key="normal" title="Recommend Activity"/>
+                                <connections>
+                                    <action selector="recommendButtonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Lod-pU-LGm"/>
+                                </connections>
+                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wZU-m3-pXj">
+                                <rect key="frame" x="20" y="441.5" width="374" height="25.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Acticity:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nWS-u1-TT9">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="25.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="wZU-m3-pXj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="5OH-IZ-fWL"/>
+                            <constraint firstItem="Fb4-JC-kZW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="5wg-M9-IHn"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Fb4-JC-kZW" secondAttribute="trailing" constant="20" id="7qA-eg-JBR"/>
+                            <constraint firstItem="wZU-m3-pXj" firstAttribute="top" secondItem="zwp-Nj-Lsq" secondAttribute="bottom" constant="60" id="BXH-xe-tWK"/>
+                            <constraint firstItem="zwp-Nj-Lsq" firstAttribute="top" secondItem="Fb4-JC-kZW" secondAttribute="bottom" constant="60" id="HG5-5f-eLV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zwp-Nj-Lsq" secondAttribute="trailing" constant="20" id="KcT-vr-hfD"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="wZU-m3-pXj" secondAttribute="trailing" constant="20" id="Qgf-hO-uPE"/>
+                            <constraint firstItem="Fb4-JC-kZW" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="RSZ-ma-ctK"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="wZU-m3-pXj" secondAttribute="bottom" constant="395" id="Z0N-6J-Gpf"/>
+                            <constraint firstItem="wZU-m3-pXj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="frj-da-QnG"/>
+                            <constraint firstItem="zwp-Nj-Lsq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="iQt-1N-Sky"/>
+                            <constraint firstItem="wZU-m3-pXj" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="pGW-mj-YSR"/>
+                            <constraint firstItem="zwp-Nj-Lsq" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="s1U-aV-Du5"/>
+                            <constraint firstItem="wZU-m3-pXj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="vmk-6q-8M5"/>
+                            <constraint firstItem="Fb4-JC-kZW" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="80" id="yzo-fi-zXd"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="activityLabel" destination="nWS-u1-TT9" id="p19-eA-9YC"/>
+                        <outlet property="temptureTxtField" destination="FSC-il-ccv" id="AcI-pg-aHb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="139" y="98"/>
         </scene>
     </scenes>
 </document>
